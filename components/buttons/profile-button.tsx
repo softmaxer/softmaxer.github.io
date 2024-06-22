@@ -5,7 +5,7 @@ export interface ProfileProps {
 
 export default function ProfileButton({ action, path }: ProfileProps) {
   return (
-    <p className="text-orange-300 dark:text-orange-400">
+    <p className="text-sky-600 dark:text-sky-400">
       <a
         href={path}
         className="inline-flex items-center font-medium text-white hover:underline transition-all"

@@ -3,7 +3,7 @@ import ProjectCard from "@/components/project-card";
 export default function Projects() {
   return (
     <div className="flex flex-col justify-between items-center gap-20">
-      <h1 className="text-orange-300 text-7xl">My projects</h1>
+      <h1 className="text-sky-600 text-7xl">My projects</h1>
       <div className="flex flex-row justify-between items-center gap-4">
         <ProjectCard
           name="OSAIL"

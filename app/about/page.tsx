@@ -5,7 +5,7 @@ export default function About() {
     <>
       <div className="flex flex-col justify-between">
         <div className="flex flex-col justify-between gap-20">
-          <h1 className="text-orange-300 text-7xl text-center">About me</h1>
+          <h1 className="text-sky-600 text-7xl text-center">About me</h1>
           <p className="text-xl lg:text-left text-center">
             I am an AI engineer / developper and I believe that good software
             should be simple and intuitive, both to develop and to use. I am
@@ -26,7 +26,7 @@ export default function About() {
           </p>
           <div className="flex flex-row items-center justify-evenly">
             <div className="flex flex-col items-center">
-              <h3 className="text-orange-300 text-3xl">Languages I speak</h3>
+              <h3 className="text-sky-600 text-3xl">Languages I speak</h3>
               <div className="flex -space-x-0.5 rtl:space-x-reverse">
                 <TechItem altName="Go" logoPath="/icons/go.png" />
                 <TechItem altName="Python" logoPath="/icons/python.png" />
@@ -35,7 +35,7 @@ export default function About() {
             </div>
 
             <div className="flex flex-col items-center">
-              <h3 className="text-orange-300 text-3xl">Frameworks I use</h3>
+              <h3 className="text-sky-600 text-3xl">Frameworks I use</h3>
               <div className="flex -space-x-0.5 rtl:space-x-reverse">
                 <TechItem altName="NextJS" logoPath="/icons/nextjs.png" />
                 <TechItem altName="React" logoPath="/icons/react.png" />

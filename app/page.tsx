@@ -7,7 +7,7 @@ export default function Home() {
         <p>
           Hey <span>👋</span>! My name is
         </p>
-        <p className="text-7xl lg:text-left  text-orange-300 text-center">
+        <p className="text-7xl lg:text-left text-sky-600 text-center">
           Sriram Vadlamani
         </p>
       </div>
