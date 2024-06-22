@@ -23,6 +23,16 @@
   }
 }
 
+@font-face {
+  font-family: "envycoder";
+  src: url("../assets/EnvyCodeR/EnvyCodeRNerdFont-Regular.ttf");
+}
+
+@font-face {
+  font-family: "agave";
+  src: url("../assets/Agave/AgaveNerdFontMono-Regular.ttf");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
