@@ -17,10 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={inter.className}>
         <div className="flex flex-row justify-evenly">
           <Sidebar />
-          <main className="flex min-h-screen flex-col items-center justify-between p-44">
+          <main className="flex min-h-screen flex-col items-center justify-between p-44 w-full md:w-full sm:w-full lg:w-full">
             {children}
           </main>
         </div>
