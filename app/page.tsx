@@ -1,4 +1,5 @@
 import ProfileButton from "@/components/buttons/profile-button";
+import SocialMediaTray from "@/components/media-tray";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           Sriram Vadlamani
         </p>
       </div>
+      <SocialMediaTray />
       <div className="flex flex-row  gap-32 items-center justify-evenly">
         <ProfileButton action="Download CV" path="/cv.pdf" />
         <ProfileButton
