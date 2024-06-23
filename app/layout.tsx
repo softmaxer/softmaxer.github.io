@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Sidebar from "@/components/sidebar";
+import Topbar from "@/components/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       </head>
       <body className="font-envycoder">
         <div className="flex flex-row justify-evenly">
-          <Sidebar />
+          <Topbar />
           <main className="flex min-h-screen flex-col items-center justify-between p-44 w-full md:w-full sm:w-full lg:w-full">
             {children}
           </main>
