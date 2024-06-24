@@ -25,7 +25,7 @@ export function TimeCircuit({ time }: TimeCircuitProps) {
   });
 
   return (
-    <div className="flex flex-row border p-1 border-white rounded-md">
+    <div className="flex flex-row">
       <span className="text-red-500 font-digital">{day}</span>
       <span
         className={visible ? "visible font-digital" : "invisible font-digital"}

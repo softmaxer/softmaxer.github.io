@@ -3,6 +3,7 @@ import SocialMediaTray from "@/components/media-tray";
 import Image from "next/image";
 import delorean from "../public/icons/raulxav-Car-delorean.svg";
 import { TimeCircuit } from "@/components/time-circuit";
+import { TimeTravel } from "@/components/time-travel";
 
 export default function Home() {
   return (
@@ -15,9 +16,7 @@ export default function Home() {
           Sriram Vadlamani
         </p>
       </div>
-      <SocialMediaTray />
-      <Image src={delorean} alt="delorean" width={100} height={100} />
-      <TimeCircuit />
+      <TimeTravel />
       <div className="flex flex-row  gap-32 items-center justify-evenly">
         <ProfileButton action="Download CV" path="/cv.pdf" />
         <ProfileButton
