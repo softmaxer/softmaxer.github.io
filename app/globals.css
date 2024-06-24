@@ -33,6 +33,11 @@
   src: url("../assets/Agave/AgaveNerdFontMono-Regular.ttf");
 }
 
+@font-face {
+  font-family: "digital";
+  src: url("../assets/digital/digital-7.ttf");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

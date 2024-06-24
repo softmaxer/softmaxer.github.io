@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         envycoder: ["envycoder"],
         agave: ["agave"],
+        digital: ["digital"],
       },
     },
     screens: {
