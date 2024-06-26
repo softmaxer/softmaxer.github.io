@@ -31,25 +31,25 @@ export function TimeCircuit({ time, fontClass }: TimeCircuitProps) {
       <span
         className={
           visible
-            ? "visible font-digital text-2xl"
-            : "invisible font-digital text-2xl"
+            ? `visible font-digital ${fontClass}`
+            : `invisible font-digital ${fontClass}`
         }
       >
         :
       </span>
-      <span className="text-red-500 font-digital text-2xl">
+      <span className={`text-red-500 font-digital ${fontClass}`}>
         {GetMonthFromNumber(month)}
       </span>
       <span
         className={
           visible
-            ? "visible font-digital text-2xl"
-            : "invisible font-digital text-2xl"
+            ? `visible font-digital ${fontClass}`
+            : `invisible font-digital ${fontClass}`
         }
       >
         :
       </span>
-      <span className="text-red-500 font-digital text-2xl">{year}</span>
+      <span className={`text-red-500 font-digital ${fontClass}`}>{year}</span>
     </div>
   );
 }
