@@ -7,16 +7,24 @@ export default function About() {
     <>
       <div className="flex flex-col justify-between">
         <div className="flex flex-col justify-between gap-20">
-          <TimeCircuit time={codingStartDate} />
+          <div className="flex justify-center items-center">
+            <TimeCircuit time={codingStartDate} fontClass="text-5xl" />
+          </div>
           <p className="text-xl lg:text-left text-center">
             2014?? How did we end up here? Well as it turns out, this was the
             day that I wrote my first ever batch script that deleted the windows
             system32, and it marked the beginning of one of the most embarrasing
-            phases in my life: 'The hacker phase' (*sigh*). However, this led me
-            to develop an interest for coding and since then, I went to a
-            computer science school and then once I graduated, I picked up data
-            science and NLP as my main profession but the developer inside me
-            always stayed.
+            phases in my life: 'The hacker phase' (*sigh*). Fun fact, this was
+            also the day that I first watched{" "}
+            <a
+              className="underline decoration-orange-300 hover:translate-y-1"
+              href="https://i.pinimg.com/originals/23/cf/16/23cf16f5613d7050e9f79c4288d4a12d.gif"
+            >
+              Back to the future!
+            </a>{" "}
+            However, this led me to develop an interest for coding and since
+            then, I went to a computer science school and then once I graduated,
+            I picked up data science and NLP as my main profession.
           </p>
           <h1 className="text-sky-600 text-7xl text-center">About me</h1>
           <p className="text-xl lg:text-left text-center">
