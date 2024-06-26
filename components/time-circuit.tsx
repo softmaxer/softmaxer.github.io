@@ -4,9 +4,10 @@ import React from "react";
 
 export interface TimeCircuitProps {
   time?: Date | undefined;
+  fontClass: string;
 }
 
-export function TimeCircuit({ time }: TimeCircuitProps) {
+export function TimeCircuit({ time, fontClass }: TimeCircuitProps) {
   const [visible, setVisible] = React.useState<boolean>(false);
   let timeToSet = new Date();
   if (time) {
@@ -26,21 +27,29 @@ export function TimeCircuit({ time }: TimeCircuitProps) {
 
   return (
     <div className="flex flex-row">
-      <span className="text-red-500 font-digital">{day}</span>
+      <span className={`text-red-500 font-digital ${fontClass}`}>{day}</span>
       <span
-        className={visible ? "visible font-digital" : "invisible font-digital"}
+        className={
+          visible
+            ? "visible font-digital text-2xl"
+            : "invisible font-digital text-2xl"
+        }
       >
         :
       </span>
-      <span className="text-red-500 font-digital">
+      <span className="text-red-500 font-digital text-2xl">
         {GetMonthFromNumber(month)}
       </span>
       <span
-        className={visible ? "visible font-digital" : "invisible font-digital"}
+        className={
+          visible
+            ? "visible font-digital text-2xl"
+            : "invisible font-digital text-2xl"
+        }
       >
         :
       </span>
-      <span className="text-red-500 font-digital">{year}</span>
+      <span className="text-red-500 font-digital text-2xl">{year}</span>
     </div>
   );
 }

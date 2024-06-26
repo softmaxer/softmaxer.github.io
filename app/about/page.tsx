@@ -1,10 +1,23 @@
 import TechItem from "@/components/tech-item";
+import { TimeCircuit } from "@/components/time-circuit";
 
 export default function About() {
+  const codingStartDate = new Date("2014-08-01");
   return (
     <>
       <div className="flex flex-col justify-between">
         <div className="flex flex-col justify-between gap-20">
+          <TimeCircuit time={codingStartDate} />
+          <p className="text-xl lg:text-left text-center">
+            2014?? How did we end up here? Well as it turns out, this was the
+            day that I wrote my first ever batch script that deleted the windows
+            system32, and it marked the beginning of one of the most embarrasing
+            phases in my life: 'The hacker phase' (*sigh*). However, this led me
+            to develop an interest for coding and since then, I went to a
+            computer science school and then once I graduated, I picked up data
+            science and NLP as my main profession but the developer inside me
+            always stayed.
+          </p>
           <h1 className="text-sky-600 text-7xl text-center">About me</h1>
           <p className="text-xl lg:text-left text-center">
             I am an AI engineer / developper and I believe that good software
