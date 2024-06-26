@@ -16,7 +16,6 @@ export default function Home() {
           Sriram Vadlamani
         </p>
       </div>
-      <SocialMediaTray />
       <TimeTravel />
       <div className="flex flex-row  gap-32 items-center justify-evenly">
         <ProfileButton action="Download CV" path="/cv.pdf" />
