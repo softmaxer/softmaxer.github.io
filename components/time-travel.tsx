@@ -8,7 +8,7 @@ export function TimeTravel() {
       href="/about"
     >
       <Image src={delorean} alt="delorean" width={130} height={130} />
-      <TimeCircuit />
+      <TimeCircuit fontClass="text-2xl" />
     </a>
   );
 }
