@@ -17,6 +17,7 @@ const config: Config = {
         envycoder: ["envycoder"],
         agave: ["agave"],
         digital: ["digital"],
+        bttf: ["bttf"],
       },
     },
     screens: {
