@@ -2,7 +2,7 @@
 
 import RedirectTo from "./buttons/redirect";
 
-export default function Sidebar() {
+export default function Topbar() {
   return (
     <>
       <div className="text-white flex flex-row fixed transition-all justify-center items-center">

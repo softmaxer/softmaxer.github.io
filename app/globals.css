@@ -16,6 +16,26 @@
   }
 }
 
+@font-face {
+  font-family: "envycoder";
+  src: url("../assets/EnvyCodeR/EnvyCodeRNerdFont-Regular.ttf");
+}
+
+@font-face {
+  font-family: "agave";
+  src: url("../assets/Agave/AgaveNerdFontMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "digital";
+  src: url("../assets/digital/digital-7.ttf");
+}
+
+@font-face {
+  font-family: "bttf";
+  src: url("../assets/BTTF/BTTF.ttf");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
