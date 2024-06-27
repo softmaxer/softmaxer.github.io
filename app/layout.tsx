@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className="font-envycoder">
         <div className="flex flex-row justify-evenly">
           <Topbar />
-          <main className="flex min-h-screen flex-col items-center justify-between p-44 w-full md:w-full sm:w-full lg:w-full">
+          <main className="flex min-h-[calc(100dvh)] flex-col items-center justify-between p-44 w-full md:w-full sm:w-full lg:w-full xsm:w-full">
             {children}
           </main>
         </div>
