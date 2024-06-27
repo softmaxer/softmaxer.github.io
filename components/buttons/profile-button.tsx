@@ -8,7 +8,7 @@ export default function ProfileButton({ action, path }: ProfileProps) {
     <p className="text-sky-600 dark:text-sky-400 hover:scale-125 transition-all">
       <a
         href={path}
-        className="inline-flex items-center font-medium text-white hover:underline transition-all"
+        className="inline-flex items-center font-medium text-white hover:underline hover:text-red-500 transition-all"
       >
         {action}
         <svg
