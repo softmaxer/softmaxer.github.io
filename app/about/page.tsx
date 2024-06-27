@@ -14,8 +14,8 @@ export default function About() {
             2014?? How did we end up here? Well as it turns out, this was the
             day that I wrote my first ever batch script that deleted the windows
             system32, and it marked the beginning of one of the most embarrasing
-            phases in my life: 'The hacker phase' (*sigh*). Fun fact, this was
-            also the day that I first watched{" "}
+            phases in my life: &apos;The hacker phase&apos;(*sigh*). Fun fact,
+            this was also the day that I first watched{" "}
             <a
               className="underline decoration-red-500 hover:translate-y-1"
               href="https://i.pinimg.com/originals/23/cf/16/23cf16f5613d7050e9f79c4288d4a12d.gif"
@@ -28,11 +28,11 @@ export default function About() {
           </p>
           <hr className="border border-t-white w-32 opacity-20" />
           <p className="text-xl lg:text-left text-center">
-            Cut to 10 years later, I've finished college with a computer science
-            degree, a master's degree in data science and I picked up NLP as my
-            main profession. Currently, I build AI based applications (RAGs,
-            agentic frameworks) and finetune models whenever I get the chance
-            to.
+            Cut to 10 years later, I&apos;ve finished college with a computer
+            science degree, a master&apos;s degree in data science and I picked
+            up NLP as my main profession. Currently, I build AI based
+            applications (RAGs, agentic frameworks) and finetune models whenever
+            I get the chance to.
             <a
               className="underline decoration-red-500 hover:translate-y-1"
               href="mailto:sriram.vadlamani@proton.me"
