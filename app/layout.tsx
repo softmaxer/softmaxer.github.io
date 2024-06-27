@@ -19,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="font-envycoder">
         <div className="flex flex-row justify-evenly">
           <Topbar />
-          <main className="flex min-h-[calc(100dvh)] flex-col items-center justify-between p-44 w-full md:w-full sm:w-full lg:w-full xsm:w-full">
+          <main className="flex min-h-[calc(100dvh)] flex-col items-center justify-between p-44 w-full md:w-full sm:w-full lg:w-full">
             {children}
           </main>
         </div>
