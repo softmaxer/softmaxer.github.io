@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import ProfileButton from "./buttons/profile-button";
 
 export interface ProjectCardProps {
   name: string;
@@ -16,22 +15,17 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <div className="flex flex-col justify-evenly items-center hover:scale-125 translate-y-1 transition-all group">
-      <a
-        href={link}
-        className="flex flex-col items-center  rounded-lg    dark:bg-transparent"
-      >
-        <Image
-          src={image ? image : "/cards/default.png"}
-          className="object-cover  rounded-lg h-96 md:h-auto md:w-32 "
-          width={200}
-          height={100}
-          alt={name}
-        />
-      </a>
-      <div className="hidden group-hover:block bg-transparent rounded-lg w-32">
-        <p className="text-white">{description}</p>
-      </div>
+    <div className="w-32 flex flex-col items-center gap-4 hover:scale-125 transition-all border border-white border-opacity-20 hover:bg-gray-950 rounded-lg md:w-full lg:w-full justify-center">
+      <Image
+        src={image ? image : "/cards/default.png"}
+        alt={name}
+        width={70}
+        height={70}
+        className="rounded-full"
+      />
+      <p className="font-bold text-sm text-sky-600 text-center">{name}</p>
+      <p className="text-sm text-center">{description}</p>
+      <ProfileButton action="Code" path={link} />
     </div>
   );
 }
