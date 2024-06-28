@@ -14,12 +14,12 @@ export default function SocialMediaTray() {
         />
         <SocialMediaIcon
           name="X"
-          link="https://www.x.com/sriram_vadlamani"
+          link="https://www.x.com/sriram_vad"
           svgPath={xIcon}
         />
         <SocialMediaIcon
           name="Instagram"
-          link="https://www.instagram.com/srir4mvadlamani"
+          link="https://www.instagram.com/srir4mvad"
           svgPath={instaIcon}
         />
       </div>
