@@ -15,7 +15,7 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <div className="w-32 flex flex-col items-center gap-4 hover:scale-125 transition-all border border-white border-opacity-20 hover:bg-gray-950 rounded-lg md:w-full lg:w-full justify-center">
+    <div className="w-full flex flex-col items-center gap-4 hover:scale-125 transition-all border border-white border-opacity-20 hover:bg-gray-950 rounded-lg md:w-full lg:w-full justify-center">
       <Image
         src={image ? image : "/cards/default.png"}
         alt={name}
