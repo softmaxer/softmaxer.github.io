@@ -45,7 +45,7 @@ export default function Home() {
         <p>Or if you&apos;re feeling adventurous, you can</p>
         <a
           className="font-bttf text-xl hover:scale-125 hover:text-red-500 transition-all"
-          href="#"
+          href="/about"
         >
           {"<"} time travel
         </a>
