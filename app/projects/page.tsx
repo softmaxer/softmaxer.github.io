@@ -31,6 +31,13 @@ export default function Projects() {
           languagesUsed={[GetLanguageColorMap("go")]}
         />
         <ProjectCard
+          name="Pydantic serializer"
+          description="A python decorator to serialize json strings into a pydantic model, with error handling"
+          link="https://pypi.org/project/pydantic-serializer"
+          image="/icons/python.png"
+          languagesUsed={[GetLanguageColorMap("python")]}
+        />
+        <ProjectCard
           name="This website!"
           description="My portfolio, built with NextJS and Tailwind"
           link="https://github.com/softmaxer/softmaxer.github.io"
