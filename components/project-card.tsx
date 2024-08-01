@@ -36,7 +36,7 @@ export default function ProjectCard({
       <div className="flex flex-row justify-between">
         <LanguageBadge languages={languagesUsed} />
       </div>
-      <ProfileButton action="Code" path={link} />
+      <ProfileButton action="Read more" path={link} />
     </div>
   );
 }
