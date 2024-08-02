@@ -31,8 +31,8 @@ export default function Projects() {
           languagesUsed={[GetLanguageColorMap("go")]}
         />
         <ProjectCard
-          name="Pydantic serializer"
-          description="A python decorator to serialize json strings into a pydantic model, with error handling"
+          name="Pydantic deserializer"
+          description="A python decorator to deserialize json strings into a pydantic model, with error logging"
           link="https://pypi.org/project/pydantic-serializer"
           image="/icons/python.png"
           languagesUsed={[GetLanguageColorMap("python")]}
