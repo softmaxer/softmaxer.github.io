@@ -22,9 +22,9 @@ export default function Home() {
         </div>
         <div className="flex flex-row gap-4">
           <span className="font-digital text-xl">CURRENT STATUS:</span>
-          <span className="font-digital text-xl text-green-500">
+          <span className="font-digital text-xl text-yellow-500">
             <Typewriter
-              words={["ACTIVE", "Working with a client."]}
+              words={["OPEN TO WORK", "Looking for new opportunities"]}
               loop={-1}
               deleteSpeed={20}
               typeSpeed={30}
