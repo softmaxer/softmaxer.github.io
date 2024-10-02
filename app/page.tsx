@@ -24,7 +24,7 @@ export default function Home() {
           <span className="font-digital text-xl">CURRENT STATUS:</span>
           <span className="font-digital text-xl text-yellow-500">
             <Typewriter
-              words={["OPEN TO WORK", "Looking for new opportunities"]}
+              words={["OPEN TO WORK", "Looking for opportunities"]}
               loop={-1}
               deleteSpeed={20}
               typeSpeed={30}
