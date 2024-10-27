@@ -7,7 +7,7 @@ export interface TechItemProps {
 
 export default function TechItem({ altName, logoPath }: TechItemProps) {
   return (
-    <div className="hover:scale-125 transition-all hover:-translate-y-6 flex flex-col border border-white border-opacity-20 rounded-lg justify-center items-center">
+    <div className="hover:scale-125 transition-all hover:-translate-y-6 flex flex-col justify-center items-center">
       <Image
         className="w-50 h-50  rounded-full"
         src={logoPath ? logoPath : "/icons/default_tech.png"}
