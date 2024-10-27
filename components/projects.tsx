@@ -13,7 +13,7 @@ export default function Projects() {
     <ProjectCard
       projectName="Pedal"
       imagePath="/cards/pedal.png"
-      link="https://github.com/softmaxer/pedal"
+      link="https://github.com/softmaxer/PedalAI"
       key={2}
     />,
     <ProjectCard
