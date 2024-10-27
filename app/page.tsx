@@ -1,54 +1,69 @@
+"use client";
 import ProfileButton from "@/components/buttons/profile-button";
-import SocialMediaTray from "@/components/media-tray";
-import { Typewriter } from "nextjs-simple-typewriter";
+import { useIsVisible } from "@/hooks/element-boundary";
+import Image from "next/image";
 import React from "react";
 
 export default function Home() {
+  const titleRef = React.useRef<HTMLDivElement>(null);
+  const titleIsVisible = useIsVisible(titleRef);
+
+  const taglineRef = React.useRef<HTMLParagraphElement>(null);
+  const taglineIsVisible = useIsVisible(taglineRef);
   return (
-    <div className="flex flex-col items-center gap-10">
-      <div className="flex flex-col">
-        <p>
-          Hey <span>👋</span>! My name is
-        </p>
-        <p className="text-7xl lg:text-left text-sky-600 text-center font-bold">
-          Sriram Vadlamani
-        </p>
-        <p>I&apos;m an</p>
-        <div className="flex flex-row justify-between">
-          <p className="text-xl lg:text-left text-sky-600 text-center italic">
-            AI engineer / developer
-          </p>
-          <SocialMediaTray />
-        </div>
-        <div className="flex flex-row gap-4">
-          <span className="font-digital text-xl">CURRENT STATUS:</span>
-          <span className="font-digital text-xl text-yellow-500">
-            <Typewriter
-              words={["OPEN TO WORK", "Looking for opportunities"]}
-              loop={-1}
-              deleteSpeed={20}
-              typeSpeed={30}
-            />
-          </span>
-        </div>
-      </div>
-      <div className="flex flex-row items-center gap-10 border border-red-500 rounded-md border-opacity-30 p-5">
-        <ProfileButton action="Check out my projects" path="/projects" />
-        <ProfileButton action="Download my CV" path="/cv.pdf" />
-        <ProfileButton
-          action="Hire me"
-          path="mailto:sriram.vadlamani@proton.me"
+    <div className="flex flex-col md:flex-row lg:flex-row justify-start items-start p-24 md:p-32 lg:p-44 gap-14">
+      <div
+        ref={titleRef}
+        className={`flex flex-col gap-5 justify-start items-start ${titleIsVisible ? "opacity-100" : "opacity-0"} ease-in duration-300`}
+      >
+        <Image
+          src={"/profile_pic.png"}
+          width={300}
+          height={300}
+          alt="profile_pic"
+          className="rounded-3xl"
         />
+        <p className="text-7xl md:text-7xl lg:text-9xl text-left font-solanelBold">
+          Sriram
+        </p>
+        <p className="text-2xl md:text-4xl lg:text-4xl text-left opacity-40 font-solanelBold">
+          Data Scientist
+        </p>
       </div>
-      <hr className="border border-t-white w-32 opacity-20" />
-      <div className="flex flex-row gap-1.5">
-        <p>Or if you&apos;re feeling adventurous, you can</p>
-        <a
-          className="font-bttf text-xl hover:scale-125 hover:text-red-500 transition-all"
-          href="/about"
-        >
-          {"<"} time travel
-        </a>
+      <div
+        ref={taglineRef}
+        className={`${taglineIsVisible ? "opacity-70" : "opacity-0"} ease-in duration-1000 font-solanelLight flex flex-col justify-start items-end gap-12 md:gap-24 lg:gap-16`}
+      >
+        <p className={`text-right text-2xl md:text-2xl lg:text-4xl`}>
+          I&apos;m a Data Scientist based in Paris, France. I speacialize in NLP
+          and Generative AI applications.
+          <br />I provide architecture, build models, and deploy them.
+        </p>
+
+        <dl className="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+          <div className="flex flex-col pb-3 justify-end items-end">
+            <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+              Email address
+            </dt>
+            <dd className="text-lg font-semibold">
+              sriram.vadlamani@proton.me
+            </dd>
+          </div>
+          <div className="flex flex-col pt-3 justify-end items-end">
+            <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+              Phone number
+            </dt>
+            <dd className="text-lg font-semibold">+33 7 55 31 20 13</dd>
+          </div>
+        </dl>
+
+        <div className="flex flex-col justify-end rounded-md p-2  gap-5 font-solanelRegular">
+          <ProfileButton action="Work experience" path="/work" />
+          <ProfileButton
+            action="Contact me"
+            path="mailto:sriram.vadlamani@proton.me"
+          />
+        </div>
       </div>
     </div>
   );
