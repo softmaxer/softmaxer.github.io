@@ -38,6 +38,7 @@ export default function Home() {
           I&apos;m a Data Scientist based in Paris, France. I speacialize in NLP
           and Generative AI applications.
           <br />I provide architecture, build models, and deploy them.
+          <br />I also enjoy building web apps in my free time.
         </p>
 
         <dl className="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
