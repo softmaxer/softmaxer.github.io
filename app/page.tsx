@@ -27,7 +27,7 @@ export default function Home() {
           Sriram
         </p>
         <p className="text-2xl md:text-4xl lg:text-4xl text-left opacity-40 font-solanelBold">
-          Data Scientist
+          AI engineer / developer
         </p>
       </div>
       <div
