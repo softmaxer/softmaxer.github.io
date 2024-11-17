@@ -35,10 +35,11 @@ export default function Home() {
         className={`${taglineIsVisible ? "opacity-70" : "opacity-0"} ease-in duration-1000 font-solanelLight flex flex-col justify-start items-end gap-12 md:gap-24 lg:gap-16`}
       >
         <p className={`text-right text-2xl md:text-2xl lg:text-4xl`}>
-          I&apos;m a Data Scientist based in Paris, France. I speacialize in NLP
-          and Generative AI applications.
+          I&apos;m an AI engineer / developer based in Paris, France. I
+          speacialize in NLP and Generative AI applications (or you know... just
+          regular apps).
           <br />I provide architecture, build models, and deploy them.
-          <br />I also enjoy building web apps in my free time.
+          <br />I also enjoy building responsive web apps in my free time.
         </p>
 
         <dl className="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
