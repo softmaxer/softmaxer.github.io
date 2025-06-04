@@ -134,8 +134,8 @@ export const RESUME_DATA = {
         <>
           Analyzed user reviews using advanced NLP models for topic and
           sentiment analysis. Implemented CI/CD for model deployment and
-          fine-tuned models for French language tasks, optimizing for entity and
-          topic classification.
+          fine-tuned models for French language tasks, optimizing for entity
+          classification.
         </>
       ),
     },

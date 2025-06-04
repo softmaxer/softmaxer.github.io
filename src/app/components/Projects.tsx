@@ -125,14 +125,14 @@ export function Projects({ projects }: ProjectsProps) {
   return (
     <Section className="scroll-mb-16 print:space-y-4 print:pt-12">
       <h2 className="text-xl font-bold" id="side-projects">
-        Side projects
+        Languages
       </h2>
       <div
-        className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3"
+        className="grid grid-cols-4 gap-2"
         role="feed"
         aria-labelledby="side-projects"
       >
-        {projects.map((project) => (
+        {/*projects.map((project) => (
           <article
             key={project.title}
             className="h-full" // Added h-full here
@@ -144,7 +144,26 @@ export function Projects({ projects }: ProjectsProps) {
               link={"link" in project ? project.link.href : undefined}
             />
           </article>
-        ))}
+        ))*/}
+        {/*<p className="font-bold text-sm">English</p>
+        <p className="font-bold text-sm">French</p>
+        <p className="font-bold text-sm">Telugu</p>
+        <p className="font-bold text-sm">Hindi</p>*/}
+
+        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+          English
+        </Badge>
+        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+          French
+        </Badge>
+
+        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+          Hindi
+        </Badge>
+
+        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+          Telugu
+        </Badge>
       </div>
     </Section>
   );
