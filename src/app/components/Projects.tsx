@@ -150,18 +150,30 @@ export function Projects({ projects }: ProjectsProps) {
         <p className="font-bold text-sm">Telugu</p>
         <p className="font-bold text-sm">Hindi</p>*/}
 
-        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+        <Badge
+          className="text-black print:text-[10px] bg-blue-400"
+          aria-label={`Skill: English`}
+        >
           English
         </Badge>
-        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+        <Badge
+          className="text-black print:text-[10px] bg-blue-400"
+          aria-label={`Skill: English`}
+        >
           French
         </Badge>
 
-        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+        <Badge
+          className="text-black print:text-[10px] bg-blue-400"
+          aria-label={`Skill: English`}
+        >
           Hindi
         </Badge>
 
-        <Badge className="print:text-[10px]" aria-label={`Skill: English`}>
+        <Badge
+          className="text-black print:text-[10px] bg-blue-400"
+          aria-label={`Skill: English`}
+        >
           Telugu
         </Badge>
       </div>
