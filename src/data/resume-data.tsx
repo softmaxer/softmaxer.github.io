@@ -24,7 +24,7 @@ export const RESUME_DATA = {
       <br />
       <p className="italic font-bold">
         Currently open to teaching software development, systems design and
-        other related courses.
+        other related courses or english.
       </p>
     </>
   ),
