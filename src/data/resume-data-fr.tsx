@@ -16,10 +16,16 @@ export const RESUME_DATA_FR = {
     "Ingénieur Full Stack et éducateur soucieux du détail, dédié à la création de produits de haute qualité et à la formation des futurs talents de la tech.",
   summary: (
     <>
-      Ingénieur spécialisé dans la conception de systèmes et le backend, avec une expertise en infrastructure, intégrations et applications d'IA générative telles que les agents vocaux, les chatbots et les RAGs conçus pour le secteur de la santé. Expérimenté en conception d'architecture technique et en leadership d'équipes à distance.
+      Ingénieur spécialisé dans la conception de systèmes et le backend, avec
+      une expertise en infrastructure, intégrations et applications d&apos;IA
+      générative telles que les agents vocaux, les chatbots et les RAGs conçus
+      pour le secteur de la santé. Expérimenté en conception d&apos;architecture
+      technique et en leadership d&apos;équipes à distance.
       <br />
       <p className="italic font-bold">
-        Actuellement ouvert à l'enseignement du développement logiciel, de la conception de systèmes et d'autres cours connexes ou de l'anglais.
+        Actuellement ouvert à l&apos;enseignement du développement logiciel, de
+        la conception de systèmes et d&apos;autres cours connexes ou de
+        l&apos;anglais.
       </p>
     </>
   ),
@@ -68,7 +74,9 @@ export const RESUME_DATA_FR = {
       end: null,
       description: (
         <>
-          Développement et déploiement d'agents vocaux GenAI, intégration d'API et d'infrastructures. Gestion de VPN et conception de middleware pour des interactions fluides avec des codes tiers.
+          Développement et déploiement d&apos;agents vocaux GenAI, intégration
+          d&apos;API et d&apos;infrastructures. Gestion de VPN et conception de
+          middleware pour des interactions fluides avec des codes tiers.
         </>
       ),
     },
@@ -83,7 +91,11 @@ export const RESUME_DATA_FR = {
       end: "Sept 2024",
       description: (
         <>
-          Développement de feuilles de route GenAI pour l'extraction d'informations et l'automatisation. Architecture de solutions de transcription audio, aidant au financement de pré-amorçage. Structuration des transcriptions textuelles en ontologies.
+          Développement de feuilles de route GenAI pour l&apos;extraction
+          d&apos;informations et l&apos;automatisation. Architecture de
+          solutions de transcription audio, aidant au financement de
+          pré-amorçage. Structuration des transcriptions textuelles en
+          ontologies.
         </>
       ),
     },
@@ -105,7 +117,11 @@ export const RESUME_DATA_FR = {
       end: "Juin 2024",
       description: (
         <>
-          Analyse des retours patients à l'aide de modèles NLP avancés pour générer des résumés d'avis. Traitement des données médicales pour extraire les codes clés et évaluation des performances de l'IA. Déploiement de solutions IA sur Azure, intégration d'interfaces utilisateur et maintenance des dépôts de code.
+          Analyse des retours patients à l&apos;aide de modèles NLP avancés pour
+          générer des résumés d&apos;avis. Traitement des données médicales pour
+          extraire les codes clés et évaluation des performances de l&apos;IA.
+          Déploiement de solutions IA sur Azure, intégration d&apos;interfaces
+          utilisateur et maintenance des dépôts de code.
         </>
       ),
     },
@@ -120,7 +136,11 @@ export const RESUME_DATA_FR = {
       end: "Nov 2023",
       description: (
         <>
-          Analyse des avis utilisateurs à l'aide de modèles NLP avancés pour l'analyse de sujets et de sentiments. Implémentation de CI/CD pour le déploiement de modèles et affinage de modèles pour des tâches en langue française, en optimisant pour la classification d'entités.
+          Analyse des avis utilisateurs à l&apos;aide de modèles NLP avancés
+          pour l&apos;analyse de sujets et de sentiments. Implémentation de
+          CI/CD pour le déploiement de modèles et affinage de modèles pour des
+          tâches en langue française, en optimisant pour la classification
+          d&apos;entités.
         </>
       ),
     },
@@ -144,7 +164,7 @@ export const RESUME_DATA_FR = {
     {
       title: "Pedal AI",
       techStack: ["React", "Python"],
-      description: "Un prototype d'éditeur audio basé sur l'IA.",
+      description: "Un prototype d&apos;éditeur audio basé sur l&apos;IA.",
       logo: MonitoLogo,
       link: {
         label: "Github",
@@ -154,7 +174,8 @@ export const RESUME_DATA_FR = {
     {
       title: "Ollamanet",
       techStack: ["Go"],
-      description: "Un répartiteur de charge pour l'inférence LLM concurrente.",
+      description:
+        "Un répartiteur de charge pour l&apos;inférence LLM concurrente.",
       logo: MonitoLogo,
       link: {
         label: "Github",
@@ -164,7 +185,8 @@ export const RESUME_DATA_FR = {
     {
       title: "Envy",
       techStack: ["Go"],
-      description: "Un petit outil CLI pour chiffrer et gérer les fichiers .env",
+      description:
+        "Un petit outil CLI pour chiffrer et gérer les fichiers .env",
       logo: ConsultlyLogo,
       link: {
         label: "Github",
@@ -172,4 +194,4 @@ export const RESUME_DATA_FR = {
       },
     },
   ],
-} as const;
+};
