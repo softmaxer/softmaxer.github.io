@@ -1,6 +1,8 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 
 type Skills = readonly string[];
@@ -40,10 +42,11 @@ interface SkillsProps {
  * Displays a list of professional skills as badges
  */
 export function Skills({ skills, className }: SkillsProps) {
+  const { language } = useLanguage();
   return (
     <Section className={className}>
       <h2 className="text-xl font-bold" id="skills-section">
-        Skills
+        {language === "en" ? "Skills" : "Compétences"}
       </h2>
       <SkillsList skills={skills} aria-labelledby="skills-section" />
     </Section>

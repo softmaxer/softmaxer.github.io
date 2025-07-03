@@ -1,11 +1,13 @@
+"use client";
+
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { RESUME_DATA } from "@/data/resume-data";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface LocationLinkProps {
-  location: typeof RESUME_DATA.location;
-  locationLink: typeof RESUME_DATA.locationLink;
+  location: string;
+  locationLink: string;
 }
 
 function LocationLink({ location, locationLink }: LocationLinkProps) {
@@ -47,7 +49,11 @@ function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
 }
 
 interface ContactButtonsProps {
-  contact: typeof RESUME_DATA.contact;
+  contact: {
+    email: string;
+    tel: string;
+    social: { name: string; url: string; icon: React.ElementType }[];
+  };
   personalWebsiteUrl?: string;
 }
 
@@ -92,7 +98,10 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
 }
 
 interface PrintContactProps {
-  contact: typeof RESUME_DATA.contact;
+  contact: {
+    email: string;
+    tel: string;
+  };
   personalWebsiteUrl?: string;
 }
 
@@ -140,41 +149,43 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
  * Header component displaying personal information and contact details
  */
 export function Header() {
+  const { language, setLanguage, translations } = useLanguage();
+
   return (
     <header className="flex items-center justify-between">
       <div className="flex-1 space-y-1.5">
         <h1 className="text-2xl font-bold" id="resume-name">
-          {RESUME_DATA.name}
+          {translations.name}
         </h1>
         <p
           className="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]"
           aria-labelledby="resume-name"
         >
-          {RESUME_DATA.about}
+          {translations.about}
         </p>
 
         <LocationLink
-          location={RESUME_DATA.location}
-          locationLink={RESUME_DATA.locationLink}
+          location={translations.location}
+          locationLink={translations.locationLink}
         />
 
         <ContactButtons
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+          contact={translations.contact}
+          personalWebsiteUrl={translations.personalWebsiteUrl}
         />
 
         <PrintContact
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+          contact={translations.contact}
+          personalWebsiteUrl={translations.personalWebsiteUrl}
         />
       </div>
 
       <Avatar className="size-28" aria-hidden="true">
         <AvatarImage
-          alt={`${RESUME_DATA.name}'s profile picture`}
-          src={RESUME_DATA.avatarUrl}
+          alt={`${translations.name}'s profile picture`}
+          src={translations.avatarUrl}
         />
-        <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+        <AvatarFallback>{translations.initials}</AvatarFallback>
       </Avatar>
     </header>
   );

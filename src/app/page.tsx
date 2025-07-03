@@ -1,68 +1,84 @@
+"use client";
+
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
-import { RESUME_DATA } from "@/data/resume-data";
+import { useLanguage } from "@/context/LanguageContext";
 import { WorkExperience } from "./components/WorkExperience";
 import { Projects } from "./components/Projects";
 import { Education } from "./components/Education";
 import { Summary } from "./components/Summary";
 import { Skills } from "./components/Skills";
 import { Header } from "./components/Header";
-
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} - Resume`,
-  description: RESUME_DATA.about,
-  openGraph: {
-    title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
-    type: "profile",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://cv.jarocki.me/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: `${RESUME_DATA.name}'s profile picture`,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
-    images: ["https://cv.jarocki.me/opengraph-image"],
-  },
-};
-
-/**
- * Transform social links for command menu
- */
-function getCommandMenuLinks() {
-  const links = [];
-
-  if (RESUME_DATA.personalWebsiteUrl) {
-    links.push({
-      url: RESUME_DATA.personalWebsiteUrl,
-      title: "Personal Website",
-    });
-  }
-
-  return [
-    ...links,
-    ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-      url: socialMediaLink.url,
-      title: socialMediaLink.name,
-    })),
-  ];
-}
+import { Button } from "@/components/ui/button";
 
 export default function ResumePage() {
+  const { language, setLanguage, translations } = useLanguage();
+
+  const metadata: Metadata = {
+    title: `${translations.name} - Resume`,
+    description: translations.about,
+    openGraph: {
+      title: `${translations.name} - Resume`,
+      description: translations.about,
+      type: "profile",
+      locale: language === "en" ? "en_US" : "fr_FR",
+      images: [
+        {
+          url: "https://cv.jarocki.me/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${translations.name}'s profile picture`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${translations.name} - Resume`,
+      description: translations.about,
+      images: ["https://cv.jarocki.me/opengraph-image"],
+    },
+  };
+
+  function getCommandMenuLinks() {
+    const links = [];
+
+    if (translations.personalWebsiteUrl) {
+      links.push({
+        url: translations.personalWebsiteUrl,
+        title: "Personal Website",
+      });
+    }
+
+    return [
+      ...links,
+      ...translations.contact.social.map((socialMediaLink) => ({
+        url: socialMediaLink.url,
+        title: socialMediaLink.name,
+      })),
+    ];
+  }
+
   return (
     <main
       className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
       id="main-content"
     >
+      <div className="flex justify-start gap-2 mb-4 print:hidden">
+        <Button
+          variant={language === "en" ? "default" : "outline"}
+          onClick={() => setLanguage("en")}
+        >
+          EN
+        </Button>
+        <Button
+          variant={language === "fr" ? "default" : "outline"}
+          onClick={() => setLanguage("fr")}
+        >
+          FR
+        </Button>
+      </div>
       <div className="sr-only">
-        <h1>{RESUME_DATA.name}&apos;s Resume</h1>
+        <h1>{translations.name}&apos;s Resume</h1>
       </div>
 
       <section
@@ -72,15 +88,15 @@ export default function ResumePage() {
         <Header />
 
         <div className="space-y-8 print:space-y-2 flex flex-col">
-          <Summary summary={RESUME_DATA.summary} />
+          <Summary summary={translations.summary} />
 
           <div className="print:gap-14 space-y-8 print:space-y-2 print:flex print:flex-row print:items-start print:justify-between">
-            <WorkExperience work={RESUME_DATA.work} />
+            <WorkExperience work={translations.work} />
 
             <div className="flex flex-col gap-10 print:gap-4">
-              <Education education={RESUME_DATA.education} />
-              <Skills skills={RESUME_DATA.skills} />
-              <Projects projects={RESUME_DATA.projects} />
+              <Education education={translations.education} />
+              <Skills skills={translations.skills} />
+              <Projects projects={translations.projects} />
             </div>
           </div>
         </div>

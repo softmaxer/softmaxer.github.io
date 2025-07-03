@@ -1,10 +1,23 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
+import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 
-type WorkExperience = (typeof RESUME_DATA)["work"][number];
+type WorkExperience = {
+  company: string;
+  link: string;
+  type: readonly string[];
+  badges: readonly string[];
+  title: string;
+  logo: React.ElementType;
+  start: string;
+  end: string | null;
+  description: React.ReactNode;
+};
+
 type WorkBadges = readonly string[];
 
 interface BadgeListProps {
@@ -31,7 +44,7 @@ function BadgeList({ className, badges, badgeColor }: BadgeListProps) {
             variant="secondary"
             className={cn(
               "align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight",
-              badgeColor,
+              badgeColor
             )}
           >
             {badge}
@@ -51,12 +64,15 @@ interface WorkPeriodProps {
  * Displays the work period in a consistent format
  */
 function WorkPeriod({ start, end }: WorkPeriodProps) {
+  const { language } = useLanguage();
   return (
     <div
       className="text-sm tabular-nums text-gray-500"
-      aria-label={`Employment period: ${start} to ${end ?? "Present"}`}
+      aria-label={`Employment period: ${start} to ${
+        end ?? (language === "en" ? "Present" : "Aujourd'hui")
+      }`}
     >
-      {start} - {end ?? "Present"}
+      {start} - {end ?? (language === "en" ? "Present" : "Aujourd'hui")}
     </div>
   );
 }
@@ -137,7 +153,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
 }
 
 interface WorkExperienceProps {
-  work: (typeof RESUME_DATA)["work"];
+  work: WorkExperience[];
 }
 
 /**
@@ -145,10 +161,11 @@ interface WorkExperienceProps {
  * Renders a list of work experiences in chronological order
  */
 export function WorkExperience({ work }: WorkExperienceProps) {
+  const { language } = useLanguage();
   return (
     <Section>
       <h2 className="text-xl font-bold" id="work-experience">
-        Work Experience
+        {language === "en" ? "Work Experience" : "Expérience Professionnelle"}
       </h2>
       <div
         className="space-y-4 print:space-y-0"

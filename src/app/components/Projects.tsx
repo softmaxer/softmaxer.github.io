@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "../../components/ui/badge";
 import {
   Card,
@@ -7,7 +9,18 @@ import {
   CardContent,
 } from "../../components/ui/card";
 import { Section } from "../../components/ui/section";
-import { RESUME_DATA } from "../../data/resume-data";
+import { useLanguage } from "@/context/LanguageContext";
+
+type Project = {
+  title: string;
+  techStack: readonly string[];
+  description: string;
+  logo: React.ElementType;
+  link?: {
+    label: string;
+    href: string;
+  };
+};
 
 type ProjectTags = readonly string[];
 
@@ -115,67 +128,52 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
 }
 
 interface ProjectsProps {
-  projects: (typeof RESUME_DATA)["projects"];
+  projects: readonly Project[];
 }
 
 /**
  * Section component displaying all side projects
  */
 export function Projects({ projects }: ProjectsProps) {
+  const { language } = useLanguage();
   return (
     <Section className="scroll-mb-16 print:space-y-4 print:pt-12">
-      <h2 className="text-xl font-bold" id="side-projects">
-        Languages
-      </h2>
-      <div
-        className="grid grid-cols-4 gap-2"
-        role="feed"
-        aria-labelledby="side-projects"
-      >
-        {/*projects.map((project) => (
-          <article
-            key={project.title}
-            className="h-full" // Added h-full here
+      <div className="mt-4">
+        <h2 className="text-xl font-bold" id="languages">
+          {language === "en" ? "Languages" : "Langues"}
+        </h2>
+        <div
+          className="grid grid-cols-4 gap-2 mt-2"
+          role="feed"
+          aria-labelledby="languages"
+        >
+          <Badge
+            className="text-black print:text-[10px] bg-blue-400"
+            aria-label={`Skill: English`}
           >
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              tags={project.techStack}
-              link={"link" in project ? project.link.href : undefined}
-            />
-          </article>
-        ))*/}
-        {/*<p className="font-bold text-sm">English</p>
-        <p className="font-bold text-sm">French</p>
-        <p className="font-bold text-sm">Telugu</p>
-        <p className="font-bold text-sm">Hindi</p>*/}
+            {language === "en" ? "English" : "Anglais"}
+          </Badge>
+          <Badge
+            className="text-black print:text-[10px] bg-blue-400"
+            aria-label={`Skill: French`}
+          >
+            {language === "en" ? "French" : "Français"}
+          </Badge>
 
-        <Badge
-          className="text-black print:text-[10px] bg-blue-400"
-          aria-label={`Skill: English`}
-        >
-          English
-        </Badge>
-        <Badge
-          className="text-black print:text-[10px] bg-blue-400"
-          aria-label={`Skill: English`}
-        >
-          French
-        </Badge>
+          <Badge
+            className="text-black print:text-[10px] bg-blue-400"
+            aria-label={`Skill: Hindi`}
+          >
+            Hindi
+          </Badge>
 
-        <Badge
-          className="text-black print:text-[10px] bg-blue-400"
-          aria-label={`Skill: English`}
-        >
-          Hindi
-        </Badge>
-
-        <Badge
-          className="text-black print:text-[10px] bg-blue-400"
-          aria-label={`Skill: English`}
-        >
-          Telugu
-        </Badge>
+          <Badge
+            className="text-black print:text-[10px] bg-blue-400"
+            aria-label={`Skill: Telugu`}
+          >
+            Telugu
+          </Badge>
+        </div>
       </div>
     </Section>
   );
